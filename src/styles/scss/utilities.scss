@@ -1,0 +1,171 @@
+//Typography
+
+@for $i from 8 through 44 {
+    .text-#{$i}{
+        font-size: $i * 1px;
+    }
+}
+.text-semibold{
+    font-weight: 600;
+}
+
+.text-capitalize{
+    text-transform: capitalize;
+}
+
+
+//Spacing
+
+@for $i from 1 through 10 {
+
+    $unit: $i * 8;
+
+    .padding-#{$unit}{
+        padding: $unit*1px;
+    }
+
+    .padding-top-#{$unit}{
+        padding-top: $unit*1px;
+    }
+
+    .padding-right-#{$unit}{
+        padding-right: $unit*1px;
+    }
+
+    .padding-bottom-#{$unit}{
+        padding-bottom: $unit*1px;
+    }
+
+    .padding-left-#{$unit}{
+        padding-left: $unit*1px;
+    }
+
+    .padding-v-#{$unit}{
+        padding: $unit*1px 0px;
+    }
+
+    .padding-h-#{$unit}{
+        padding: 0px $unit*1px;
+    }
+
+
+    .margin-#{$unit}{
+        margin: $unit*1px;    
+    }
+
+    .margin-top-#{$unit}{
+        margin-top: $unit*1px;
+    }
+
+    .margin-right-#{$unit}{
+        margin-right: $unit*1px;
+    }
+
+    .margin-bottom-#{$unit}{
+        margin-bottom: $unit*1px;
+    }
+
+    .margin-left-#{$unit}{
+        margin-left: $unit*1px;
+    }
+
+    .margin-v-#{$unit}{
+        margin: $unit*1px 0px;
+    }
+
+    .margin-h-#{$unit}{
+        margin: 0px $unit*1px;
+    }
+}
+
+.no-margin{
+    margin: 0px !important;
+}
+
+.no-padding{
+    padding: 0px !important;
+}
+
+
+
+// Flexbox
+
+.flex-center{
+    @include flex-center;
+}
+
+.flex{
+    display: flex;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.align-items-end{
+    align-items: flex-end;
+}
+
+.align-items-start{
+    align-items: flex-start;
+}
+
+.align-items-baseline{
+    align-items: baseline;
+}
+
+.align-items-stretch{
+    align-items: stretch;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+
+.justify-content-start{
+    justify-content: flex-start;
+}
+
+.justify-content-end{
+    justify-content: flex-end;
+}
+
+.justify-content-around{
+    justify-content: space-around;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.flex-grow{
+    flex-grow: 1;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.flex-row{
+    flex-direction: row;
+}
+
+.flex-row-reverse{
+    flex-direction: row-reverse;
+}
+
+.flex-column-reverse{
+    flex-direction: column-reverse;
+}
+
+
+
+// Cursor
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.cursor-default{
+    cursor: default;
+}

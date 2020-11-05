@@ -1,0 +1,54 @@
+@mixin fluid-type($min-font-size: 12px, $max-font-size: 21px, $lower-range: 420px, $upper-range: 1200px) {
+    font-size: calc(#{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))} * ( (100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))}));
+    @media screen and (max-width: $lower-range) {
+        font-size: $min-font-size;
+    }
+    @media screen and (min-width: $upper-range) {
+        font-size: $max-font-size;
+    }
+}
+
+
+@mixin pos-left($offset: 20px){
+    position: absolute;
+    left: $offset;
+    top: 0px;
+    bottom: 0px;
+}
+
+@mixin pos-right($offset: 20px){
+    position: absolute;
+    right: $offset;
+    top: 0px;
+    bottom: 0px;
+}
+
+
+@mixin pos-top($offset: 20px){
+    position: absolute;
+    top: $offset;
+    left: 0px;
+    right: 0px;
+}
+
+@mixin pos-bottom($offset: 20px){
+    position: absolute;
+    bottom: $offset;
+    left: 0px;
+    right: 0px;
+}
+
+@mixin pos-fill{
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+@mixin flex-center($type : flex){
+    display: $type;
+    justify-content: center;
+    align-items: center;
+}
+
